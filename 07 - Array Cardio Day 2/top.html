@@ -13,7 +13,10 @@
     
     <button onclick="alert('Hello World')">Click Me</button>
 
-    <button id="btn">Click Me</button>v
+    <button id="btn">Click Me</button>
+    <button id="one">Click Me</button>
+    <button id="two">Click Me</button>
+    <button id="three">Click Me</button>
   </div>
 
   <script>
@@ -46,7 +49,12 @@
       alert("Hello World");
       e.target.style.background = "blue";
     });
-   
+   const buttons = document.querySelectorAll('button');
+   buttons.forEach(
+    button => button.addEventListener(
+      'click', () => alert(button.id)
+    )
+   )
   </script>
 
 
